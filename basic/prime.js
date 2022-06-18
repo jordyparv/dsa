@@ -1,4 +1,4 @@
-const { toInt } = require('../parv');
+import { toInt, print } from '../parv.js';
 function isPrime(num) {
   let count = 0;
 
@@ -19,4 +19,4 @@ let prime = [];
 for (let i = 1; i < 100; i++) {
   if (isPrime(i)) prime.push(i);
 }
-console.log(prime);
+print(prime);

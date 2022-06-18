@@ -1,4 +1,4 @@
-const { toInt } = require('../parv');
+import { toInt } from '../parv.js';
 let lcm = [];
 
 let num1 = 6,
@@ -14,9 +14,9 @@ for (let i = 2; i < 10; i++) {
       count++;
     }
   }
-  
+
   if (count === 0) {
-  console.log(i);
+    console.log(i);
   }
   count = 0;
 }
