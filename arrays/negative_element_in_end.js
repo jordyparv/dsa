@@ -1,5 +1,5 @@
 import { size, print } from '../parv.js';
-function fixAarry(arr) {
+function shiftNegRight(arr) {
   let pos = [];
   let neg = [];
   for (let i of arr) {
@@ -9,4 +9,4 @@ function fixAarry(arr) {
   return [...pos, ...neg];
 }
 
-print(fixAarry([1, -1, 3, 2, -7, -5, 11, 6]));
+print(shiftNegRight([1, -1, 3, 2, -7, -5, 11, 6]));
