@@ -4,5 +4,6 @@ function toInt(num) {
 function size(arr) {
   return arr.length;
 }
-const print = console.log ;
+const a = 'a';
+const print = console.log;
 export { toInt, print, size };

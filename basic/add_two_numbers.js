@@ -33,7 +33,6 @@ var addTwoNumbers = function (l1, l2) {
   }
   if (carry > 0) result.push(carry);
   return listNode(result);
-  
 };
 
-console.log(addTwoNumbers([0], [0]));
+console.log(addTwoNumbers([0,2,3,4,5], [0,2,12,13,2,1]));
