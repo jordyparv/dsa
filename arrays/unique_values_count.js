@@ -24,6 +24,6 @@ function unique_values_count(arr) {
   return unique_values_counts;
 }
 
-const arr = [1, 1, 1, 2, 2, 3, 45, 4, 7];
+const arr = [1, 1, 1, 2, 2, 3, 45, 4, 7, 777, 7, 77, 7, 7, 7, 1, 1, 11, 1];
 
 console.log(unique_values_count(arr));
