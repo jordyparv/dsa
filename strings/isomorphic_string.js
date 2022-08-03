@@ -39,7 +39,7 @@ function isIsomorphic(s, t) {
 }
 
 const str1 = 'badc';
-const str2 = 'baba';
+const str2 = 'bada';
 
 const result = isIsomorphic(str1, str2);
 console.log(result);
