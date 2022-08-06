@@ -28,41 +28,43 @@
 // console.log(result);
 
 // without using space
-function binary_search(arr, value) {
+function kthelement(arr, k) {
   if (!arr.length) return -1;
-  let start = 0,
-    end = arr.length;
-
-  while (start <= end) {
-    let mid = Math.floor(start + (end - start) / 2);
-    if (arr[mid] === value) {
-      return mid;
-    } else if (value > arr[mid]) {
-      start = mid + 1;
-    } else {
-      end = mid - 1;
-    }
-  }
-  return -1;
-}
-
-function kthelement(arr, kth) {
   const len = arr.length;
-  let count = 0;
-  let x = -1;
 
-  for (let i = 0; i < len; i++)
-    for (let j = 0; j < len; j++) {
-      for (let k = i; k < len; k++) {
-        if (count === kth) {
-          x = arr[j][k - 1];
-          break;
-        }
-      }
-      count++;
+  function count(matrix, ele) {
+    let row = 0,
+      col = len - 1;
+    let count = 0;
+    while (row < len && col >= 0) {
+      if (matrix[row][col] <= ele) {
+        count += col + 1;
+        row++;
+      } else col -= 1;
     }
-  console.log(count);
-  return x;
+
+    return count;
+  }
+
+  let low = arr[0][0],
+    high = arr[len - 1][len - 1];
+
+  while (low < high) {
+    let mid = Math.floor((low + high) / 2);
+
+    if (count(arr, mid) < k) {
+      low = mid + 1;
+    } else high = mid;
+  }
+  return  high;
 }
-const result = kthelement([[-5]], 1);
+
+const result = kthelement(
+  [
+    [1, 5, 9],
+    [10, 11, 13],
+    [12, 13, 15],
+  ],
+  8
+);
 console.log(result);
