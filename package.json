@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/iJordanGh0st/dsa/issues"
   },
-  "homepage": "https://github.com/iJordanGh0st/dsa#readme"
+  "homepage": "https://github.com/iJordanGh0st/dsa#readme",
+  "dependencies": {
+    "numjs": "^0.16.1"
+  }
 }
